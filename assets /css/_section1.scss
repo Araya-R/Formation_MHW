@@ -1,6 +1,6 @@
-section:first-of-type {
-    background-color: black;
+section {
     position: relative;
+    overflow: hidden;
 }
 
 //PARENT = EFFET OMBRE AVEC UN ::AFTER
@@ -38,7 +38,7 @@ h3 {
     font-family: "goblin";
 }
 
-.ZoneText {
+.ZoneText{
     width: 30%;
     position: absolute;
     right: 60px;
