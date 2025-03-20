@@ -30,12 +30,10 @@ section:nth-of-type(3) h2::after{
     transition: all 1.5s ease-in-out;
 }
 
-//CLASSE POUR FAIRE ROTATE L'ÉLÉMENT
 .showRight {
     transform: translateX(40%);
 }
 
-//CLASSE POUR FAIRE RETOURNER (DEVENANT INVISIBLE)L'ÉLÉMENT À SA PLACE EN DEHORS DE L'ÉCRAN
 .hideRight {
     opacity: 0;
     transform: translateX(170%);

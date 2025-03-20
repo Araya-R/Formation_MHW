@@ -1,24 +1,36 @@
-document.getElementById('animateButton').addEventListener('click', function() {
+// ANIMATION SECTION 2
+document.getElementById('animateButton').addEventListener('click', function () {
     let element = document.getElementById('myElement');
-    element.classList.toggle('show');  // Affiche ou cache l'élément
+    element.classList.toggle('show');
 });
-
-// Utilisation de transitionend pour ajouter la classe 'hide' après la fin de la transition
+//FAIRE DISPARAÎTRE L'ÉLÉMENT EN RECLIQUANT
 let element = document.getElementById('myElement');
-element.addEventListener('click', function() {
-    element.classList.add('hide');  // Cache l'élément après la fin de la transition
+element.addEventListener('click', function () {
+    element.classList.add('hide');
 });
 
-// Partie 2 : Animer le déplacement de l'élément vers la gauche au clic
-
+//ANIMATION SECTION 3
 let object = document.getElementById("myElementRight");
 let button = document.getElementById("animateButtonRight");
 
-button.addEventListener("click", function() {
-    object.classList.toggle('showRight');  // Déplace l'élément vers la gauche
+button.addEventListener('click', function () {
+    object.classList.toggle('showRight');
+});
+//FAIRE DISPARAÎTRE L'ÉLÉMENT EN RECLIQUANT
+object.addEventListener('click', function () {
+    object.classList.add('hideRight');
 });
 
-// Lorsque la transition est terminée, on ajoute la classe 'hideLeft' pour rendre l'élément invisible
-object.addEventListener('click', function() {
-    object.classList.add('hideRight');  // Cache l'élément après son déplacement
+//ANIMATION SECTION 4
+let objectB = document.getElementById("myElementBottom");
+let buttonB = document.getElementById("animateButtonBottom");
+
+buttonB.addEventListener('click', function () {
+    objectB.classList.toggle('showBottom');
 });
+//FAIRE DISPARAÎTRE L'ÉLÉMENT EN RECLIQUANT
+objectB.addEventListener('click', function () {
+    objectB.classList.add('hideBottom');
+});
+
+
