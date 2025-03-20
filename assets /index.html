@@ -20,27 +20,28 @@
             <img src="img/Monster_Hunter_Wilds_Logo.png" alt="logo">
         </div>
 
+        <!-- BARRE MENU -->
         <div id="BarreMenu">
-            <div class="menu">
+            <div class="menu" id="menu">
                 <nav>
                     <ul>
                         <li>
-                            <a href="#">MENU</a>
+                            <a href="#laChasse">La chasse est ouverte</a>
                         </li>
                         <li>
-                            <a href="#">MENU</a>
+                            <a href="#nouvellesMenaces">Nouvelles Menaces</a>
                         </li>
                         <li>
-                            <a href="#">MENU</a>
+                            <a href="#endGame">Contenu end-game</a>
                         </li>
                         <li>
-                            <a href="#">MENU</a>
+                            <a href="#biomes">biomes etendus et vivants</a>
                         </li>
                     </ul>
                 </nav>
             </div>
 
-            <div id="hamburger">
+            <div id="hamburger" onclick="toggleMenu()">
                 <ul>
                     <li></li>
                     <li></li>
@@ -54,7 +55,7 @@
     <main>
         <!-- SECTION 1 -->
         <section>
-            <h2>LA CHASSE EST OUVERTE</h2>
+            <h2 id="laChasse">LA CHASSE EST OUVERTE</h2>
             <div><img src="img/arkveld.png" alt=""></div>
             <div class="ZoneText">
                 <h3>LA ZONE INTERDITE EST À PORTÉE</h3>
@@ -73,7 +74,7 @@
 
         <!-- SECTION 2 -->
         <section>
-            <h2>NOUVELLES MENACES</h2>
+            <h2 id="nouvellesMenaces">NOUVELLES MENACES</h2>
 
             <div>
                 <video src="video/Balahara.mp4" autoplay muted></video>
@@ -103,7 +104,7 @@
 
         <!-- SECTION 3 -->
         <section>
-            <h2>contenu end-game</h2>
+            <h2 id="endGame" >contenu end-game</h2>
             <div>
                 <video src="video/Hirabami.mp4" autoplay muted></video>
             </div>
@@ -132,7 +133,7 @@
 
         <!--SECTION 4 -->
         <section>
-            <h2>biomes etendus et vivants</h2>
+            <h2 id="biomes">biomes etendus et vivants</h2>
             <div>
                 <video src="video/RayDau.mp4" autoplay muted></video>
             </div>

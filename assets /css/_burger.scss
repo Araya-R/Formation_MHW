@@ -1,68 +1,84 @@
 // BARRE MENU
-nav ul {
-    display: flex;
-    justify-content: space-around;
+nav {
+    width: 70vw;
+    height: 40px;
+    padding-top: 40px;
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
 
 li {
     list-style: none;
 }
 
-nav {
-    width: 50vw;
-    height: 40px;
-    padding-top: 40px;
-}
-
 #BarreMenu {
+    position: fixed;
+    z-index: 5;
     padding-top: 10px;
     padding-bottom: 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
-    position: absolute;
+
     bottom: 5px;
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7322233606557378) 51%, rgba(0, 0, 0, 0.014190573770491821) 95%);
+
+    .menu li {
+        width: 200px;
+        height: 90px;
+        text-align: right;
+        background-image: url(../img/icon.png);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+
+        a {
+            text-decoration: none;
+            color: wheat;
+            font-family: "goblin";
+            padding-left: 100px;
+            padding-top: 60px;
+
+        }
+
+        &::after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            position: absolute;
+            left: 30px;
+            bottom: 40px;
+            background-image: url(../img/icon.png);
+            background-position: center;
+            background-repeat: none;
+            background-size: cover;
+        }
+        &:hover{
+            &::after{
+                background-color: yellow;
+            }
+        }
+    }
 }
 
-a {
-    text-decoration: none;
-    color: wheat;
-    font-family: "goblin";
-    padding-left: 100px;
-    padding-top: 60px;
-
+// FAIRE APPARAITRE LA BARRE MENU LORS D'UN CLICK
+.menu {
+    width: 70%;
+    opacity: 0; // le menu est invisible par défaut
+    visibility: hidden; //empêche d'interagir avec le menu quand il est caché
+    transition: opacity 0.3 ease-in-out, visibility 0.3 ease-in-out; //transition fluid pour l'opacité
 }
 
-#BarreMenu li {
-    width: 80px;
-    height: 90px;
-    background-image: url(../img/icon.png);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
+.menu.showMenu {
+    opacity: 1; // rendre le menu visible
+    visibility: visible; // le menu devient interactif
 }
-
-.menu li::after {
-    content: "";
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    position: absolute;
-    left: 30px;
-    bottom: 40px;
-    background-image: url(../img/icon.png);
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
-    background-color: yellow;
-
-
-}
-
-
 
 // MENU HAMBURGER
 #hamburger {
@@ -74,7 +90,7 @@ a {
     background-size: cover;
     position: relative;
     padding-bottom: 10px;
-    
+
     &:hover {
         li {
             &:first-of-type {
@@ -88,6 +104,8 @@ a {
             &:last-of-type {
                 transform: rotate(-45deg) translate(5px, -21px);
             }
+
+            cursor: pointer;
         }
     }
 }
@@ -108,4 +126,3 @@ a {
     position: relative;
     transition: all 1s ease;
 }
-

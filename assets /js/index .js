@@ -1,3 +1,16 @@
+//FAIRE APPARAÎTRE LA BARRE MENU EN CLIQUANT SUR BURGER
+
+function toggleMenu(){
+    const menu = document.getElementById('menu');
+    //ajoute ou enlève la class show
+    menu.classList.toggle('showMenu');
+}
+
+
+
+
+
+
 // ANIMATION SECTION 2
 document.getElementById('animateButton').addEventListener('click', function () {
     let element = document.getElementById('myElement');

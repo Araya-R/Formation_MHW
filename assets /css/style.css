@@ -27,52 +27,50 @@ header {
   top: 200px;
 }
 
+nav {
+  width: 70vw;
+  height: 40px;
+  padding-top: 40px;
+}
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 li {
   list-style: none;
 }
 
-nav {
-  width: 50vw;
-  height: 40px;
-  padding-top: 40px;
-}
-
 #BarreMenu {
+  position: fixed;
+  z-index: 5;
   padding-top: 10px;
   padding-bottom: 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
-  position: absolute;
   bottom: 5px;
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.7322233607) 51%, rgba(0, 0, 0, 0.0141905738) 95%);
 }
-
-a {
+#BarreMenu .menu li {
+  width: 200px;
+  height: 90px;
+  text-align: right;
+  background-image: url(../img/icon.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+#BarreMenu .menu li a {
   text-decoration: none;
   color: wheat;
   font-family: "goblin";
   padding-left: 100px;
   padding-top: 60px;
 }
-
-#BarreMenu li {
-  width: 80px;
-  height: 90px;
-  background-image: url(../img/icon.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-}
-
-.menu li::after {
+#BarreMenu .menu li::after {
   content: "";
   width: 15px;
   height: 15px;
@@ -84,7 +82,21 @@ a {
   background-position: center;
   background-repeat: none;
   background-size: cover;
+}
+#BarreMenu .menu li:hover::after {
   background-color: yellow;
+}
+
+.menu {
+  width: 70%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3 ease-in-out, visibility 0.3 ease-in-out;
+}
+
+.menu.showMenu {
+  opacity: 1;
+  visibility: visible;
 }
 
 #hamburger {
@@ -96,6 +108,9 @@ a {
   background-size: cover;
   position: relative;
   padding-bottom: 10px;
+}
+#hamburger:hover li {
+  cursor: pointer;
 }
 #hamburger:hover li:first-of-type {
   transform: rotate(45deg) translate(-5px, 10px);
